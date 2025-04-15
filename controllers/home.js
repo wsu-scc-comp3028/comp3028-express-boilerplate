@@ -11,3 +11,7 @@ export async function index(req, res, next) {
     res.render('home', { title: 'Express' });
 }
 
+/* res.render('home', { title: 'Express' });
+This renders a template named 'home' (EJS).
+{ title: 'Express' } passes an object with a title property into the template, 
+which can be used dynamically in the rendered page. */

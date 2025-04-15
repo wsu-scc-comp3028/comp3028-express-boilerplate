@@ -5,4 +5,8 @@ import {cartMiddleware} from '../middleware/cartMiddleware.js';
 const cartRouter = express.Router()
 export default cartRouter;
 
-cartRouter.get('/add/:id?/:qty?', cartMiddleware, cart.add);
+//cartRouter.get('/add/:id?/:qty?', cartMiddleware, cart.add);
+cartRouter.get('/add/:id?/:qty?', cartMiddleware, (req, res, next) => {
+    console.log("Cart route hit. Params:", req.params); // Log parameters
+    next();
+}, cart.add);
