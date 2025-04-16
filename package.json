@@ -15,5 +15,8 @@
     "morgan": "~1.9.1",
     "supertest": "^7.0.0"
   },
-  "type": "module"
+  "type": "module",
+"jest": {
+  "extensionsToTreatAsEsm": [".mjs"]
+}
 }
